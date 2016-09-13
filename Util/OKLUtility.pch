@@ -1,0 +1,32 @@
+//
+//  OKLUtility.pch
+//  KLDailyTest
+//
+//  Created by YanqingLee on 16/9/8.
+//  Copyright © 2016年 YanqingLee. All rights reserved.
+//
+
+#ifndef OKLUtility_pch
+#define OKLUtility_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "ExtendLog.h"
+#import "OKLNotificationConst.h"
+#import "OKLMacros.h"
+
+#ifdef DEBUG
+#define OKLLog(args...) ExtendNSLog(__FILE__, __LINE__, __PRETTY_FUNCTION__, args);
+#else
+#define NSLog(x...)
+#endif
+
+#endif
+
+#endif /* OKLUtility_pch */
